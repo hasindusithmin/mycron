@@ -8,11 +8,6 @@ from pytz import timezone
 from dotenv import load_dotenv
 
 
-
-def test():
-    token = os.environ.get('BOT_TOKEN')
-    requests.get(f'https://api.telegram.org/{token}/sendMessage?chat_id=-647851516&text=cronjob is run')
-
 def sendMessage():
     r = requests.get('http://www.adaderana.lk/hot-news/',headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"})
         
