@@ -5,6 +5,7 @@ import os
 
 
 
+
 def sendMessage(cat):
     load_dotenv()
     r = requests.get(f'https://api.jokes.one/jod?category={cat}')

@@ -14,6 +14,9 @@ def http():
     return {'message':'hello world'}
 
 
+def job0():
+    tel.test()
+
 def job1():
     tel.sendMessage()
 
@@ -29,6 +32,7 @@ def job4():
 def job5():
     fb.sendMessage(cat="knock-knock")
 
+sched.add_job(job0, CronTrigger.from_crontab('*/2 * * * *'))
 sched.add_job(job1, CronTrigger.from_crontab('59 * * * *'))
 sched.add_job(job2,CronTrigger.from_crontab('30 2 * * *'))
 sched.add_job(job3,CronTrigger.from_crontab('30 4 * * *'))
