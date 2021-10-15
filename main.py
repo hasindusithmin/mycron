@@ -5,7 +5,9 @@ from apscheduler.triggers.cron import CronTrigger
 import tel
 import fb
 
+
 app = FastAPI()
+
 sched = BackgroundScheduler()
 
 
